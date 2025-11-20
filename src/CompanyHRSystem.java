@@ -1,15 +1,33 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.*;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class CompanyHRSystem {
+    public static void main(String[] args) {
+        HR hrAdmin = new HR("Carol", 4000);
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("\n--- HR Menu ---");
+            System.out.println("1. Add Employee");
+            System.out.println("2. Show All Employees");
+            System.out.println("3. Exit");
+            System.out.print("Choose an option: ");
+
+            int choice = sc.nextInt();
+            sc.nextLine(); // تنظيف buffer
+
+            switch (choice) {
+                case 1:
+                    hrAdmin.addEmployeeFromInput(sc);
+                    break;
+                case 2:
+                    hrAdmin.showAllEmployees();
+                    break;
+                case 3:
+                    System.out.println("Exiting...");
+                    return; // الخروج من البرنامج
+                default:
+                    System.out.println("Invalid choice! Try again.");
+            }
         }
     }
 }

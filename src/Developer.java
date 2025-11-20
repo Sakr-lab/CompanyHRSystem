@@ -1,4 +1,13 @@
-package PACKAGE_NAME;
+class Developer extends Employee {
+    private double overtime;
 
-public class Developer {
+    public Developer(String name, double baseSalary, double overtime) {
+        super(name, baseSalary);
+        this.overtime = overtime;
+    }
+
+    @Override
+    public double calculateSalary() {
+        return baseSalary + overtime;
+    }
 }
