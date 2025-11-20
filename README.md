@@ -5,32 +5,32 @@ This Java project simulates a dynamic HR management system where an HR employee 
 
 ## Features
 
-**Add Employee: Dynamically add Manager, Developer, or another HR employee.
+Add Employee: Dynamically add Manager, Developer, or another HR employee.
 
-**Show All Employees: List all employees with details including name, ID, and calculated salary.
+Show All Employees: List all employees with details including name, ID, and calculated salary.
 
-**Dynamic Interaction: The program runs in a loop, allowing the HR employee to continuously perform actions until they choose to exit.
+Dynamic Interaction: The program runs in a loop, allowing the HR employee to continuously perform actions until they choose to exit.
 
-**Salary Calculation: Each employee type has its own salary calculation logic.
+Salary Calculation: Each employee type has its own salary calculation logic.
 
-**Manager: baseSalary + bonus
+Manager: baseSalary + bonus
 
-**Developer: baseSalary + overtime
+Developer: baseSalary + overtime
 
-**HR: baseSalary
+HR: baseSalary
 
 ##Project Structure
 
-**Employee (Abstract Class)
+Employee (Abstract Class)
 Base class for all employee types. Includes common attributes like name, id, and baseSalary, and an abstract method calculateSalary().
 
-**Manager (Subclass of Employee)
+Manager (Subclass of Employee)
 Represents a manager with an additional bonus attribute.
 
-**Developer (Subclass of Employee)
+Developer (Subclass of Employee)
 Represents a developer with an additional overtime attribute.
 
-**HR (Subclass of Employee)
+HR (Subclass of Employee)
 Represents an HR employee who can manage other employees.
 Methods include:
 
