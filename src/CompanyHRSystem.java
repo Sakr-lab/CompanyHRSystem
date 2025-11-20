@@ -13,7 +13,7 @@ public class CompanyHRSystem {
             System.out.print("Choose an option: ");
 
             int choice = sc.nextInt();
-            sc.nextLine(); // تنظيف buffer
+            sc.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -24,7 +24,7 @@ public class CompanyHRSystem {
                     break;
                 case 3:
                     System.out.println("Exiting...");
-                    return; // الخروج من البرنامج
+                    return; 
                 default:
                     System.out.println("Invalid choice! Try again.");
             }
